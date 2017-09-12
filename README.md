@@ -13,4 +13,6 @@
 
 ### Python_ml (Machine Learning Algorithms Using Python)
 
+### react (react.js Training)
+
 ### vue (vue.js Training)
