@@ -4,5 +4,4 @@
 
 ## Folder Structure
 
-### book (book notes)
-> Book: Fullstack React The Complete Guide to ReactJS and Friends 
+### Microsoft (Microsoft Reactjs tutorial)
