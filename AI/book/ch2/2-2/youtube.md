@@ -1,21 +1,17 @@
 # 1-2 THE CONCEPT OF RATIONALITY
 
 Slide0
-> In the last video we defined what an agent is and its relation to artificial Intelligence
+> In the last video we defined what a basic agent is and its relation to artificial Intelligence
 
-> In This video will discuss the concept of Rational Agents
+> In This video will discuss the concept of Rational Agents aka Smart Agents AKA Intelligent Agents
 
-> Lets define what a Rational Agent is
+> Lets start off by defining what a Rational Agent is
 
 
 Slide 1:
-> A Rational Agent is an agent is one that does the right thing, But that doesnt really define anything. So if we dig a little deeper we will find that a Rational Agent has every entry in the table for its function ﬁlled out correctly.
+> A Rational Agent is an agent is one that does the right thing. A rational agent does exactly what you programmed. if we dig a little deeper we will find that a Rational Agent has every entry in the table for its function ﬁlled out correctly.
 
-> These Two definitions alone opens up a world of possibilities
-
-> The first question I asked my self was What Does it mean to do the right thing? and how does having the agent function filled out correctly relate. How can I tell its doing the right thing.
-
-> The answer is by considering the consequences of the particular agent’s behavior.
+> We mesure a rational agent by considering the consequences of the particular agent’s behavior.
 
 > When We put an agent in an environment it generates a sequence of actions according to the percepts or inputs it receives
 
@@ -29,13 +25,13 @@ Slide 1:
 
 > An important thing to note is that these are environment states, not agent states.
 
-> The agent perceives these and uses its actuatuaters after deciding if it should do so based on the contents of these environment states.
+> The agent perceives and uses its actuatuaters after deciding if it should do so based on the contents of these environment states.
 
 > If we were to judge success based on agent states and not environment states, then an agent can achieve perfect rationality easily by telling itself that it has performed well even if the environment is still messey. 
 
 > An agent cannot judge its own success. Instead the environment state will let a agent know when it has performed well.
 
-> There is no fixed performance measure for all agents and A developer must develop one for his or hers own circumstances.
+> There is no fixed performance measure for all agents and you the developer must develop one for your own circumstances.
 
 > Lets look at the Vacuum cleaner example again from the last video.
 
@@ -43,7 +39,7 @@ Slide 1:
 
 > and With a rational agent, what you ask for is exactly what you get. Nothing more, nothing less.
 
-> This may cause a problem if you have not considered thoroughly brainstorming the performance measure
+> This may cause a problem if you have not thoroughly brainstormed the performance measure
 
 > Looking at the example. A rational agent can maximize the performance measure we created by cleaning up the dirt, then dumping it all on the ﬂoor, then cleaning it up again, and so on.
 
@@ -73,7 +69,50 @@ Slide 1:
     • The only available actions are Left, Right, andSuck. 
     • The agent correctly perceives its location and whether that location contains dirt.
 
-> > We claim that under these circumstances the agent is indeed rational; its expected performance is at least as high as any other agent’s. 
+> We claim that under these circumstances the agent is indeed rational; its expected performance is at least as high as any other agent’s. 
 
-> > One can see easily that the same agent would be irrational under different circumstances.
+> One can see easily that the same agent would be irrational under different circumstances.
 
+> For example, once all the dirt is cleaned up, the agent will oscillate needlessly back and forth; if the performance measure includes a penalty of one point for each movement left or right, the agent will fare poorly. 
+
+>  better agent for this case would do nothing once it is sure that all the squares are clean. If clean squares can become dirty again, the agent should occasionally check and re-clean them if needed.
+
+> If the geography of the environment is unknown, the agent will need to explore it rather than stick to squares A and B. 
+
+> We need to be careful to distinguish between rationality and omniscience
+
+> An omniscient agent knows the actual outcome of its actions and can act accordingly; but omniscience is impossible in reality
+
+> Example: I am walking along the Champs Elys´ees one day and I see an old friend across the street. There is no trafﬁc nearby and I’m not otherwise engaged, so, being rational, I start to cross the street. Meanwhile, at 33,000 feet, a cargo door falls off a passing airliner,2 and before I make it to the other side of the street I am ﬂattened. Was I irrational to cross the street? It is unlikely that my obituary would read “Idiot attempts to cross street.” 
+
+> rationality is not the same as perfection
+
+> Example: I am walking along the Champs Elys´ees one day and I see an old friend across the street. There is no trafﬁc nearby and I’m not otherwise engaged, so, being rational, I start to cross the street. Meanwhile, at 33,000 feet, a cargo door falls off a passing airliner,2 and before I make it to the other side of the street I am ﬂattened. Was I irrational to cross the street? It is unlikely that my obituary would read “Idiot attempts to cross street.” 
+
+> rationality is not the same as perfection
+
+> The point is that if we expect an agent to do what turns out to be the best action after the fact, it will be impossible todesign anagent tofulﬁllthisspeciﬁcation (We dont know the future .... yet)
+
+> Our deﬁnition of rationality does not require omniscience, then, because the rational choice depends only on the percept sequence to date. We must also ensure that we haven’t inadvertently allowed the agent to engage in decidedly underintelligent activities. 
+
+> For example, ifanagent does notlook both waysbefore crossing abusy road, then itspercept sequence will not tell it that there is a large truck approaching at high speed. Does our deﬁnition of rationality say that it’s now OK to cross the road? Far from it! First, it would not be rational to cross the road given this uninformative percept sequence: the risk of accident from crossing without looking is too great. Second, a rational agent should choose the “looking” action before stepping into the street, because looking helps maximize the expected performance. Doing actions in order to modify future percepts
+
+> A second example of information gathering is provided by the exploration that must be undertaken by a vacuum-cleaning agent in an initially unknown environment. 
+
+> Our deﬁnition requires a rational agent not only to gather information but also to learn as much as possible from what it perceives
+
+> The agent’s initial conﬁguration could reﬂect some prior knowledge of the environment, but as the agent gains experience this may be modiﬁed and augmented. 
+
+> There are extreme cases in which the environment is completely known. In such cases, the agent need not perceive or learn; it simply acts correctly. Of course, such agents are fragile.
+
+> To the extent that an agent relies on the prior knowledge of its designer rather than on its own percepts, we say that the agent lacks autonomy. 
+
+> A rational agent should be autonomous—it should learn what it can to compensate for partial or incorrect prior knowledge
+
+>  For example, a vacuum-cleaning agent that learns toforesee whereandwhenadditional dirt will appear will do better than one that does not. As a practical matter, one seldom requires complete autonomy from the start
+
+>  when the agent has had little or no experience, it would have to act randomly unless the designer gave some assistance.
+
+> So, just as evolution provides animals withenough built-in reﬂexestosurvive long enough tolearnforthemselves, it would be reasonable to provide an artiﬁcial intelligent agent with some initial knowledge as well as an ability to learn.
+
+> After sufﬁcient experience of its environment, the behavior of a rational agent can become effectively independent of its prior knowledge. Hence, the incorporation of learning allows one to design a single rational agent that will succeed in a vast variety of environments.

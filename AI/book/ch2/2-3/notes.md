@@ -4,7 +4,7 @@
 
 >  For the acronymically minded, we call this the PEAS (Performance, Environment, Actuators, Sensors) description
 
->  In designing anPEAS agent, the ﬁrst step must always be to specify the task environment as fully as possible
+>  In designing an agent, the ﬁrst step must always be to specify the task environment as fully as possible
 
 > The vacuum world was a simple example; let us consider a more complex problem: an automated taxi driver
 
@@ -82,3 +82,14 @@
 > For example, an agent that has to spot defective parts on an assembly line bases each decision on the current part, regardless of previous decisions; moreover, the current decision doesn’t affect whether the next part is defective
 > In sequential environments, on the other hand, the current decision could affect all future decisions.3 Chess and taxi driving are sequential: in both cases, short-term actions can have long-term consequences.
 > Episodic environments are much simpler than sequential environments because the agent does not need to think ahead. 
+
+# Static vs. dynamic: If the environment can change while an agent is deliberating, thenSTATIC DYNAMIC we say the environment is dynamic for that agent; otherwise, it is static. Static environments are easy to deal with because the agent need not keep looking atthe world while it is deciding on an action, nor need it worry about the passage of time. Dynamic environments, on the other hand, are continuously asking the agent what it wants to do; if it hasn’t decided yet, that counts as deciding to do nothing. If the environment itself does not change with the passage of time but the agent’s performance score does, then we say the environment is semidynamic. Taxi driving is clearly dynamic: the other cars and the taxi itself keep movingSEMIDYNAMIC while the driving algorithm dithers about what to do next. Chess, when played with a clock, is semidynamic. Crossword puzzles are static. 
+
+### Discrete vs. continuous: 
+
+> The discrete/continuous distinction applies to the state of the environment, to the way time is handled, and to the percepts and actions of the agent. For example, the chess environment has a ﬁnite number of distinct states (excluding the clock). Chess also has a discrete set of percepts and actions. Taxi driving is a continuous-state and continuous-time problem: the speed and location of the taxi and of the other vehicles sweep through a range of continuous values and do so smoothly over time. Taxi-driving actions are also continuous (steering angles, etc.). Input from digital cameras is discrete, strictly speaking, but is typically treated as representing continuously varying intensities and locations. 
+
+
+### Known vs. unknown: Strictly speaking, this distinction refers not to the environmentKNOWN UNKNOWN itself but to the agent’s (or designer’s) state of knowledge about the “laws of physics” of the environment. In a known environment, the outcomes (or outcome probabilities if the environment isstochastic) forallactionsaregiven. Obviously, iftheenvironment isunknown, the agent will have to learn how it works in order to make good decisions. Note that the distinction between known and unknown environments is not the same as the one between fully and partially observable environments. It is quite possible for a known environment to be partially observable—for example, in solitaire card games, I know the rules but am still unable to see the cards that have not yet been turned over. Conversely, an unknown environment can be fully observable—in a new video game, the screen may show the entire game state but I still don’t know what the buttons do until I try them.
+
+> As one might expect, the hardest case is partially observable, multiagent, stochastic, sequential, dynamic, continuous, andunknown. Taxidriving ishardinallthese senses, except thatforthemostpart thedriver’s environment isknown. Driving arented carinanewcountry with unfamiliar geography and trafﬁc laws is a lot more exciting.
