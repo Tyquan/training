@@ -72,5 +72,7 @@ var agent1 = new Agent();
 var agent2 = new Thing();
 console.log(agent1.program);
 
-// agent1.canGrab(agent2);
-agent1.traceAgent(agent1);
+agent1.canGrab(agent2);
+//agent1.traceAgent(agent1);
+
+console.log('Is agent1 alive?', agent1.isAlive());
