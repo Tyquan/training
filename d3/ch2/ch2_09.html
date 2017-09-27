@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="../d3.js"></script>
+</head>
+<body>
+<p>the first paragraph</p> 
+<p>the second paragraph</p> 
+<p>the third paragraph</p> 
+<p>the last paragraph</p> 
+
+<script type="text/javascript">
+	// Random colors for thr paragraphs
+	d3.selectAll('p').style("color", function(){
+		r = Math.round((Math.random() * 255));
+		g = Math.round((Math.random() * 255));
+		b = Math.round((Math.random() * 255));
+		return "rgb("+r+", "+g+", "+b+")";
+	});
+</script>
+
+</body>
+</html>

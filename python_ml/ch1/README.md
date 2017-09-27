@@ -20,13 +20,13 @@
     * Reinforcement learning: learning data provides feedback so that the system adapts to dynamic conditions in order to achieve a certain goal. The system evaluates its performance based on the feedback responses and reacts accordingly. The best known instances include self-driving cars and chess master AlphaGo.
 
 
-    > in the context of supervised learning we have a scenario similar to studying for an exam. We have a set of practice questions and the actual exams. We should be able to answer exam questions without knowing the answers for them. This is called generalization—we learn something from our practice questions and hopefully are able to apply this knowledge to other similar questions.
+> in the context of supervised learning we have a scenario similar to studying for an exam. We have a set of practice questions and the actual exams. We should be able to answer exam questions without knowing the answers for them. This is called generalization—we learn something from our practice questions and hopefully are able to apply this knowledge to other similar questions.
 
-    > In machine learning, these practice questions are called training sets or training samples. They are where the models derive patterns from. And the actual exams are testing sets or testing samples
+> In machine learning, these practice questions are called training sets or training samples. They are where the models derive patterns from. And the actual exams are testing sets or testing samples
 
-    > They are where the models are eventually applied and how compatible they are is what it's all about.
+> They are where the models are eventually applied and how compatible they are is what it's all about.
 
-    > Sometimes between practice questions and actual exams, we have mock exams to assess how well we will do in actual ones and to aid revision. These mock exams are called validation sets or validation samples in machine learning. They help us verify how well the models will perform in a simulated setting then we fine-tune the models accordingly in order to achieve greater hits. 
+> Sometimes between practice questions and actual exams, we have mock exams to assess how well we will do in actual ones and to aid revision. These mock exams are called validation sets or validation samples in machine learning. They help us verify how well the models will perform in a simulated setting then we fine-tune the models accordingly in order to achieve greater hits. 
 
-    > In a machine learning setting we give the computer example input values and example output values
+> In a machine learning setting we give the computer example input values and example output values
     

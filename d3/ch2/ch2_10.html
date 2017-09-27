@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ch2 D3 Charts</title>
+	<script type="text/javascript" src="../d3.js"></script>
+</head>
+<body>
+
+	<div id="circle"></div>
+
+	<script type="text/javascript">
+		 /*
+		 	Creating an svg Element
+		 */
+		var svg = d3.select('#circle')
+					.append('svg')
+					.attr('width', 200)
+					.attr('height', 200);
+
+		svg.append('circle')
+			.style('stroke', 'black')
+			.style('fill', 'yellow')
+			.attr('r', 40)
+			.attr('cx', 50)
+			.attr('cy', 50)
+	</script>
+
+</body>
+</html>

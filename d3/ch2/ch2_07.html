@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ch2 D3 Charts</title>
+	<script type="text/javascript" src="../d3.js"></script>
+</head>
+<body>
+
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+	<script type="text/javascript">
+		 /*
+		 	Inserting Data into Elements
+		 */
+		var fruits = ['Apples', 'Pears', 'Bananas'];
+
+		d3.selectAll('li').data(fruits).text(function(d){
+			return d;
+		});
+	</script>
+
+</body>
+</html>

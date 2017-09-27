@@ -1,9 +1,9 @@
 # 1-2 THE CONCEPT OF RATIONALITY
 
 Slide0
-> In the last video we defined what a basic agent is and its relation to artificial Intelligence
+> In the last video we defined what a simple agent is and its relation to artificial Intelligence
 
-> In This video will discuss the concept of Rational Agents aka Smart Agents AKA Intelligent Agents
+> In This video will discuss the concept of Rational Agents also known as Smart Agents Better known as Intelligent Agents
 
 > Lets start off by defining what a Rational Agent is
 
@@ -50,7 +50,7 @@ Slide 1:
 
 ## Introducing Rationality
 
-> What is rational at any given time depends on four things: 
+> What is rational for an agent at any given time depends on four things: 
     • The performance measure that deﬁnes the criterion of success. 
     • The agent’s prior knowledge of the environment. 
     • The actions that the agent can perform. 
@@ -71,31 +71,35 @@ Slide 1:
 
 > We claim that under these circumstances the agent is indeed rational; its expected performance is at least as high as any other agent’s. 
 
-> One can see easily that the same agent would be irrational under different circumstances.
+> We can see that the same agent would be irrational under different circumstances.
 
-> For example, once all the dirt is cleaned up, the agent will oscillate needlessly back and forth; if the performance measure includes a penalty of one point for each movement left or right, the agent will fare poorly. 
+> For example, once all the dirt is cleaned up, the agent will oscillate needlessly back and forth; 
 
->  better agent for this case would do nothing once it is sure that all the squares are clean. If clean squares can become dirty again, the agent should occasionally check and re-clean them if needed.
+> if the performance measure includes a penalty of one point for each movement left or right, the agent will fare poorly. 
+
+> A Better agent would do nothing once it is sure that all the squares are clean. If clean squares become dirty again, the agent should occasionally check and re-clean them if needed.
 
 > If the geography of the environment is unknown, the agent will need to explore it rather than stick to squares A and B. 
 
-> We need to be careful to distinguish between rationality and omniscience
+> We need to be careful not to mistake rationality with omniscience
 
-> An omniscient agent knows the actual outcome of its actions and can act accordingly; but omniscience is impossible in reality
+> An omniscient agent knows the actual outcome of its actions and can act accordingly
 
-> Example: I am walking along the Champs Elys´ees one day and I see an old friend across the street. There is no trafﬁc nearby and I’m not otherwise engaged, so, being rational, I start to cross the street. Meanwhile, at 33,000 feet, a cargo door falls off a passing airliner,2 and before I make it to the other side of the street I am ﬂattened. Was I irrational to cross the street? It is unlikely that my obituary would read “Idiot attempts to cross street.” 
+> But omniscience is impossible in reality
 
-> rationality is not the same as perfection
+> For Example: An agent (We will call Agent A) is walking along Times Square one day and sees an old friend (Another Agent We will call Agent B) across the street. There is no trafﬁc nearby and Agent A is not otherwise engaged in any other activity, so, being rational, Agent A starts to cross the street. Meanwhile, at 33,000 feet, a cargo door falls off a passing Airliner Agent, and before Agent A makes it to the other side of the street to greet Agent B, it is destroyed. Is Agent A irrational to cross the street?... No. How was Agent A supposed to know that an Airliner agent would malfunction, have its door connectors destroyed and fall on the exact location Agent A is momentarily standing while going through its walk_accros_strret function” 
 
-> Example: I am walking along the Champs Elys´ees one day and I see an old friend across the street. There is no trafﬁc nearby and I’m not otherwise engaged, so, being rational, I start to cross the street. Meanwhile, at 33,000 feet, a cargo door falls off a passing airliner,2 and before I make it to the other side of the street I am ﬂattened. Was I irrational to cross the street? It is unlikely that my obituary would read “Idiot attempts to cross street.” 
+> Remember...rationality is not the same as perfection
 
-> rationality is not the same as perfection
+> The point is that if we expect an agent to do what turns out to be the best action after the fact, it will be impossible to design an agent to fulﬁll this speciﬁcation (We dont know the future .... yet)
 
-> The point is that if we expect an agent to do what turns out to be the best action after the fact, it will be impossible todesign anagent tofulﬁllthisspeciﬁcation (We dont know the future .... yet)
+> Our deﬁnition of rationality does not require omniscience, because the rational choice depends only on the percept sequence to date. 
 
-> Our deﬁnition of rationality does not require omniscience, then, because the rational choice depends only on the percept sequence to date. We must also ensure that we haven’t inadvertently allowed the agent to engage in decidedly underintelligent activities. 
+> We must also ensure that we haven’t allowed the agent to engage in decidedly underintelligent activities. 
 
-> For example, ifanagent does notlook both waysbefore crossing abusy road, then itspercept sequence will not tell it that there is a large truck approaching at high speed. Does our deﬁnition of rationality say that it’s now OK to cross the road? Far from it! First, it would not be rational to cross the road given this uninformative percept sequence: the risk of accident from crossing without looking is too great. Second, a rational agent should choose the “looking” action before stepping into the street, because looking helps maximize the expected performance. Doing actions in order to modify future percepts
+> For example, if an Agent A does not look both ways before crossing a busy road, then its percept sequence will not tell it that there is a large truck approaching at high speed. 
+
+> Does our deﬁnition of rationality say that it’s now OK to cross the street? no First, it would not be rational to cross the road given this uninformative percept sequence: the risk of accident from crossing without looking is too great. Second, a rational agent should choose the “looking” action before stepping into the street, because looking helps maximize the expected performance. Doing actions in order to modify future percepts
 
 > A second example of information gathering is provided by the exploration that must be undertaken by a vacuum-cleaning agent in an initially unknown environment. 
 
@@ -116,3 +120,11 @@ Slide 1:
 > So, just as evolution provides animals withenough built-in reﬂexestosurvive long enough tolearnforthemselves, it would be reasonable to provide an artiﬁcial intelligent agent with some initial knowledge as well as an ability to learn.
 
 > After sufﬁcient experience of its environment, the behavior of a rational agent can become effectively independent of its prior knowledge. Hence, the incorporation of learning allows one to design a single rational agent that will succeed in a vast variety of environments.
+
+
+
+winmo.com
+
+yrevzin@tonicdesign.com
+
+Success2017
