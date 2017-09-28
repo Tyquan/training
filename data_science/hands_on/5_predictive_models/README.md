@@ -41,3 +41,61 @@ The	way	it	works	is	it	tries	to minimize	the	squared	error	between	each	point	an
 > we	can	measure	the	r-squared	error.	By	taking	the	y	and	the	predicted	values	(p4(x))	in	the	r2_score() function	that	we	have	in	sklearn.metrics,	we	can	compute	that.
 
 > Our	code	compares	a	set	of	observations	to	a	set	of	predictions	and	computes	r-squared	for	you,	and	with just	one	line	of	code
+
+
+## Multivariate	regression	and	predicting	car	price
+
+> What	happens	then,	if	we're	trying	to	predict	some	value	that	is	based	on	more	than	one	other	attribute? Let's	say	that	the	height	of	people	not	only	depends	on	their	weight,	but	also	on	their	genetics	or	some other	things	that	might	factor	into	it.	Well,	that's	where	multivariate	analysis	comes	in.	You	can	actually build	regression	models	that	take	more	than	one	factor	into	account	at	once
+
+> 	The	idea	of	multivariate regression	is	this:	what	if	there's	more	than	one	factor	that	influences	the	thing	you're	trying	to	predict?
+
+> Let's	say	that	you're	trying	to	predict	the	price	that a	car	will	sell	for.	It	might	be	based	on	many	different	features	of	that	car,	such	as	the	body	style,	the brand,	the	mileage;	who	knows,	even	on	how	good	the	tires	are.	Some	of	those	features	are	going	to	be more	important	than	others	toward	predicting	the	price	of	a	car,	but	you	want	to	take	into	account	all	of them	at	once.
+
+> So	our	way	forwards	here	is	still	going	to	use	the	least-squares	approach	to	fit	a	model	to	your	set	of observations.	The	difference	is	that	we're	going	to	have	a	bunch	of	coefficients	for	each	different	feature that	you	have.
+
+> for	example,	the	price	model	that	we	end	up	with	might	be	a	linear	relationship	of	alpha,	some constant,	kind	of	like	your	y-intercept	was,	plus	some	coefficient	of	the	mileage,	plus	some	coefficient	of the	age,	plus	some	coefficient	of	how	many	doors	it	has
+
+> Once	you	end	up	with	those	coefficients,	from	least	squares	analysis,	we	can	use	that	information	to	figure out,	well,	how	important	are	each	of	these	features	to	my	model.	So,	if	I	end	up	with	a	very	small coefficient	for	something	like	the	number	of	doors,	that	implies	that	the	number	of	doors	isn't	that important,	and	maybe	I	should	just	remove	it	from	my	model	entirely	to	keep	it	simpler.
+
+	# Multivariate regression using Python
+
+	## statsmodesl makes doing multivariate regression easy
+
+	import  pandas as pd
+
+	# kelly blue book cars data
+	df = pd.read_excel('http://cdn.sundog-soft.com/Udemy/DataScience/cars.xls')
+
+	# print(df.head())
+
+	## 	split it up	into the features that we care about
+	import statsmodels.api as sm
+
+	## use this Categorical() function in pandas to actually 
+	## convert the set of model	names that it sees in the DataFrame	
+	## into	a set of numbers
+	df['Model_ord'] = pd.Categorical(df.Model).codes
+
+	## My input	for	this model on the x-axis is	mileage	(Mileage), 
+	## Model converted to an ordinal value (Model_ord),	
+	## and the number of doors (Doors).
+	X = df[['Mileage', 'Model_ord', 'Doors']]
+
+	## What I'm trying to predict on the y-axis	is the price (Price).
+	y = df[['Price']]
+
+	X1 = sm.add_constant(X)
+
+	## est uses ordinary least squares, OLS, and fits that using the 
+	## columns that	I give it, Mileage,	Model_ord, and Doors.	
+	est = sm.OLS(y, X1).fit()
+
+	## print out what my model looks like
+	print(est.summary())
+
+> The	coefficient	is	a	way	of	determining	which	items	matter,	and	that's	only	true though	if	your	input	data	is	normalized.	That	is,	if	everything's	on	the	same	scale	of	0	to	1.	If	it's	not,	then these	coefficients	are	kind	of	compensating	for	the	scale	of	the	data	that	it's	seeing.	If	you're	not	dealing with	normalized	data,	as	in	this	case,	it's	more	useful	to	look	at	the	standard	errors.	In	this	case,	we	can see	that	the	mileage	is	actually	the	biggest	factor	of	this	particular	model
+	
+	## print out a new DataFrame that shows the mean price for the given number of doors
+	print(y.groupby(df.Doors).mean())
+
+> I	can	see	the	average	two-door	car	sells	for	actually	more	than	the	average	four-door	car.	If	anything there's	a	negative	correlation	between	number	of	doors	and	price,	which	is	a	little	bit	surprising
