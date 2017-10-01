@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List rendering</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+		<h1>{{title}}</h1>
+		<ul class="list-group">
+			<!-- 
+				In order to loop through each item in an array, we will use v-for Vue’s directive. The v-for loop works on arrays/objects and is used to loop through each item in an array. This directive requires a special syntax in the form of item in array where array is the source data Array and item is an alias for the Array element being iterated on. 
+			-->
+			<li v-for="i in 11" class="list-group-item">
+				{{ i }} times 4 equals {{ i * 4 }}
+			</li>
+		</ul>
+		<br>
+		<pre>
+			{{$data | json}}
+		</pre>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"> </script>
+
+	<script type="text/javascript">
+		var data = {
+			title: 'The multiplcation table of 4',
+			Description: 'Using v-for to print out the multiples of 4'
+		};
+		new Vue({
+			el: '.container',
+			data: data
+		})
+	</script>
+
+</body>
+</html>

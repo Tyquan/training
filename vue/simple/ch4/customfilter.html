@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Filters</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div>
+			<h3>Top Stories</h3>
+			<ul class="list-group">
+				<li v-for="story in stories | famous" class="list-group-item">{{story.writer}}: "{{story.plot}}" and <i>upvoted</i> <b>{{story.upvotes}}</b> times
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"> </script>
+
+	<script type="text/javascript">
+		var data = {
+			stories: [
+				{
+					plot: "I crashed my car today!",
+					writer: "Alex",
+					upvotes: 28
+				},
+				{
+					plot: "Yesterday, someone stole my bag!",
+					writer: "John",
+					upvotes: 48
+				},
+				{
+					plot: "Someone ate my chocolate...",
+					writer: "John",
+					upvotes: 19
+				},
+				{
+					plot: "I ate someone's chocolate!",
+					writer: "Alex",
+					upvotes: 12
+				}
+			]
+		};
+
+		// custom filter
+		Vue.filter('famous', function(stories){
+			return stories.filter(function(item){
+				return item.upvotes > 20
+			});
+		});
+
+		new Vue({
+			el:'.container',
+			data: data
+		})
+	</script>
+
+</body>
+</html>

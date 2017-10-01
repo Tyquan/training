@@ -32,3 +32,10 @@
 > When we perform classification,	we	usually	deal	with	a	lot	of	labels.	These	labels	can	be	in	the form	of	words,	numbers,	or	something	else.	The	machine	learning	functions	in	sklearn	expect them	to	be	numbers.	So	if	they	are	already	numbers,	then	we	can	use	them	directly	to	start training.	But	this	is	not	usually	the	case.
 
 > To	convert	word	labels into	numbers,	we	need	to	use	a	label	encoder
+
+
+## Logistic Regression Classifier (log_reg folder)
+
+> Logistic	regression	is	a	technique	that	is	used	to	explain	the	relationship	between	input variables	and	output	variables.	The	input	variables	are	assumed	to	be	independent	and	the output	variable	is	referred	to	as	the	dependent	variable.	The	dependent	variable	can	take	only	a fixed	set	of	values. These	values	correspond	to	the	classes	of	the	classification	problem. 
+> Our	goal	is	to	identify	the	relationship	between	the	independent	variables	and	the	dependent variables	by	estimating	the	probabilities	using	a	logistic	function.
+> This	logistic	function	is	a sigmoid	curve	that's	used	to	build	the	function	with	various	parameters.	It	is	very	closely related	to	generalized	linear	model	analysis,	where	we	try	to	fit	a	line	to	a	bunch	of	points	to minimize	the	error.	Instead	of	using	linear	regression,	we	use	logistic	regression.	Logistic regression	by	itself	is	actually	not	a	classification	technique,	but	we	use	it	in	this	way	so	as	to facilitate	classification.	It	is	used	very	commonly	in	machine	learning	because	of	its	simplicity. 

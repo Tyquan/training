@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loop through an Array of Objects</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+		<h1>Lets hear some stories!</h1>
+		<div>
+			<ul class="list-group">
+				<li v-for="story in stories" class="list-group-item">
+					{{$index}}. {{story.writer}}: "{{story.plot}}"
+				</li>
+			</ul>
+		</div>
+		<pre>
+			{{$data | json}}
+		</pre>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"> </script>
+
+	<script type="text/javascript">
+		var data = {
+			stories: [
+				{
+					plot: "I crashed my car today!",
+					writer: "Alex"
+				},
+				{
+					plot: "Yesterday, someone stole my bag!",
+					writer: "John"
+				},
+				{
+					plot: "Someone ate my chocolate...",
+					writer: "John"
+				},
+				{
+					plot: "I ate someone's chocolate!",
+					writer: "Alex"
+				}
+			]
+		};
+		new Vue({
+			el:'.container',
+			data: data
+		})
+	</script>
+
+</body>
+</html>

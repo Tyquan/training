@@ -5,6 +5,8 @@
 
 ### AI (Artificial Intelligence)
 
+### math (Mathematics Training Training)
+
 ### Data Science (Python)
 
 ### MIT (Python Classes and States) 

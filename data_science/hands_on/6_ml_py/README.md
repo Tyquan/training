@@ -11,7 +11,7 @@
 	* What	is	ensemble	learning 
 	* Support	Vector	Machine	(SVM)	and	its	example	using	scikit-learn
 
-## Machine learning	and	train/test
+## Machine learning	and	train/test (train_test.py)
 
 > Machine learning are algorithms	that	can	learn	from	observational	data	and	can	make	predictions	based	on	it
 
@@ -44,3 +44,22 @@ Now	I	haven't	told	the	machine	learning	algorithm,	ahead	of	time,	what	categorie
 > There	are	some	caveats	to	supervised	learning.	need	to	make	sure	that	both	your	training	and	test	datasets are	large	enough	to	actually	be	representative	of	your	data.	You	also	need	to	make	sure	that	you're catching	all	the	different	categories	and	outliers	that	you	care	about,	in	both	training	and	testing,	to	get	a good	measure	of	its	success,	and	to	build	a	good	model.
 
 > You	have	to	make	sure	that	you've	selected	from	those	datasets	randomly,	and	that	you're	not	just	carving your	dataset	in	two	and	saying	everything	left	of	here	is	training	and	right	here	is	testing.	You	want	to sample	that	randomly,	because	there	could	be	some	pattern	sequentially	in	your	data	that	you	don't	know about.
+
+> If your model is overfitting, and just going out of its way to accept outliers	in	your	training	data, then	that's	going	to	be	revealed	when	you	put	it	against	unset	scene	of	testing	data.	This	is	because	all	that gyrations	for	outliers	won't	help	with	the	outliers	that	it	hasn't	seen	before.
+
+> 	train/test	is	not	perfect,	and	it	is	possible	to	get	misleading	results	from	it.	Maybe your	sample	sizes	are	too	small,	like	we	already	talked	about,	or	maybe	just	due	to	random	chance	your training	data	and	your	test	data	look	remarkably	similar,	they	actually	do	have	a	similar	set	of	outliers	and	you	can	still	be	overfitting
+
+## K-fold cross validation
+
+> The	basic	concept	is	you	train/test	many	times.	So	you	actually	split	your	data	not into	just	one	training	set	and	one	test	set,	but	into	multiple	randomly	assigned	segments,	k	segments
+
+> You reserve one of those segments as your	test data, and then	you	start training your	model on the remaining segments	and	measure	their performance against your test	dataset. Then you take the average performance from	each of	those training sets' models' results and take their rsquared average score.
+
+> So	this	way,	you're	actually	training	on	different	slices	of	your	data,	measuring	them	against	the	same	test set,	and	if	you	have	a	model	that's	overfitting	to	a	particular	segment	of	your	training	data,	then	it	will	get averaged	out	by	the	other	ones	that	are	contributing	to	k-fold	cross-validation
+
+> K-fold	cross	validation	steps:
+	
+	1. Split your data into	K randomly-assigned	segments
+	2. Reserve one segment as your test	data 
+	3. Train on	each of	the	remaining K-1 segments and measure their performance against the test set 
+	4. Take	the	average	of	the	K-1	r-squared	scores

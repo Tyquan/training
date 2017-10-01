@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Filters</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div>
+			<div class="row">
+				<div class="col">
+					<h1 class="text-center">My People Stats</h1>
+					<table class="table">
+						<tr>
+								<td>Name</td>
+								<td>Age</td>
+							</tr>
+						<tbody>
+							<tr v-for="user in users | orderBy '-age'">
+								<td>{{user.name}}</td>
+								<td>{{user.age}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col">
+					<h2>Older Users</h2>
+					<ul v-for="user in users | older">
+						<li>{{user.name}}: {{user.age}}</li>
+					</ul>
+				</div><!-- .col -->
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"> </script>
+
+	<script type="text/javascript">
+		var data = {
+			users: [
+				{
+					age: 32,
+					name: "Alex"
+				},
+				{
+					age: 60,
+					name: "Mikey"
+				},
+				{
+					age: 56,
+					name: "Junie"
+				},
+				{
+					age: 28,
+					name: "Jazz"
+				}
+			]
+		};
+
+		// custom age filter
+		Vue.filter('older', function(data){
+			return data.filter(function(item){
+				return item.age > 55
+			});
+		});
+
+		new Vue({
+			el:'.container',
+			data: data
+		})
+	</script>
+
+</body>
+</html>

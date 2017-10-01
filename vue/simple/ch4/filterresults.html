@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loop through an Array of Objects</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+
+	<!--
+		FILTER RESULTS
+		Sometimes we need to display a filtered version of an array without actually mutating or resetting the original data. In our example we want to display a list with the stories written by Alex and one list with the stories written by John. We can achieve this using the built-in filter, filterBy.
+	-->
+
+	<!--
+		ORDERED RESULTS
+		Sometimes we may want to display the items of an Array ordered by some criteria. Luckily there is an orderBy built in filter to sort our list in no time! First we will enhance our Stories with a new propertycalledupvotes.Thenwe’llgoonanddisplayourarrayorderedbythecountofeachstory’s upvotes. The more famous a story is, the higher it should appear.
+
+	-->
+
+	<div class="container">
+		<h1>Lets hear some stories!</h1>
+		<div>
+			<h3>Alex's Stories</h3>
+			<ul class="list-group">
+				<li v-for="story in stories | filterBy 'Alex' in 'writer'" class="list-group-item">
+					{{$index}}. {{story.writer}}: "{{story.plot}}"
+				</li>
+			</ul>
+			<h3>John's Stories</h3>
+			<ul class="list-group">
+				<li v-for="story in stories | filterBy 'John' in 'writer'" class="list-group-item">{{story.writer}}: "{{story.plot}}"
+				</li>
+			</ul>
+			<hr>
+			<div class="form-group">
+				<label for="query">
+					What are you looking for?
+				</label>
+				<input v-model="query" class="form-control">
+			</div>
+			<h3>Search Results:</h3>
+			<ul class="list-group">
+				<li v-for="story in stories | filterBy query in 'plot'" class="list-group-item">{{story.writer}}: {{story.plot}}</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"> </script>
+
+	<script type="text/javascript">
+		var data = {
+			stories: [
+				{
+					plot: "I crashed my car today!",
+					writer: "Alex"
+				},
+				{
+					plot: "Yesterday, someone stole my bag!",
+					writer: "John"
+				},
+				{
+					plot: "Someone ate my chocolate...",
+					writer: "John"
+				},
+				{
+					plot: "I ate someone's chocolate!",
+					writer: "Alex"
+				}
+			]
+		};
+		new Vue({
+			el:'.container',
+			data: data
+		})
+	</script>
+
+</body>
+</html>

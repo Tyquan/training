@@ -1,18 +1,20 @@
 import numpy as np
 
 incomes = np.random.normal(27000, 15000, 10000)
+
 # # Calculate the mean of the incomes
 # print(np.mean(incomes))
 
 # # plot it in a histogram
 import matplotlib.pyplot as plt
+
 # plt.hist(incomes, 50)
 # plt.show()
 
 # # Calculate the median of the incomes
 # print(np.median(incomes))
 
-
+# # Create an outlier (someling like a trillionaire lives within the neighborhood, calculate the data)
 # incomes = np.append(incomes, [1000000000])
 # print(np.median(incomes))
 # print(np.mean(incomes))

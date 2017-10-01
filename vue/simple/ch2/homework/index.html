@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homework 1</title>
+</head>
+<body>
+
+<div id="app">
+	<h1>Hello {{name}}</h1>
+	<input type="text" v-model="name">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"> </script>
+
+<script type="text/javascript">
+	var data = {
+		name: "Tyquan"
+	};
+	new Vue({
+		el: '#app',
+		data: data
+	})
+</script>
+
+</body>
+</html>
