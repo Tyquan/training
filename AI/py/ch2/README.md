@@ -39,3 +39,17 @@
 > Logistic	regression	is	a	technique	that	is	used	to	explain	the	relationship	between	input variables	and	output	variables.	The	input	variables	are	assumed	to	be	independent	and	the output	variable	is	referred	to	as	the	dependent	variable.	The	dependent	variable	can	take	only	a fixed	set	of	values. These	values	correspond	to	the	classes	of	the	classification	problem. 
 > Our	goal	is	to	identify	the	relationship	between	the	independent	variables	and	the	dependent variables	by	estimating	the	probabilities	using	a	logistic	function.
 > This	logistic	function	is	a sigmoid	curve	that's	used	to	build	the	function	with	various	parameters.	It	is	very	closely related	to	generalized	linear	model	analysis,	where	we	try	to	fit	a	line	to	a	bunch	of	points	to minimize	the	error.	Instead	of	using	linear	regression,	we	use	logistic	regression.	Logistic regression	by	itself	is	actually	not	a	classification	technique,	but	we	use	it	in	this	way	so	as	to facilitate	classification.	It	is	used	very	commonly	in	machine	learning	because	of	its	simplicity. 
+
+
+## What is Regression (regression Folder)
+> Regression	is	the	process	of	estimating	the	relationship	between	input	and	output	variables. 
+> One	thing	to	note	is	that	the	output	variables	are	continuous-valued	real	numbers.	Hence	there are	an	infinite	number	of	possibilities.	
+> This	is	in	contrast	with	classification,	where	the	number	of output	classes	is	fixed.	The	classes	belong	to	a	finite	set	of	possibilities
+> In	regression,	it	is	assumed	that	the	output	variables	depend	on	the	input	variables,	so	we	want to	see	how	they	are	related.	Consequently,	the	input	variables	are	called	independent	variables, also	known	as	predictors,	and	output	variables	are	called	dependent	variables,	also	known	as criterion	variables.	It	is	not	necessary	that	the	input	variables	are	independent	of	each	other. There	are	a	lot	of	situations	where	there	are	correlations	between	input	variables.
+> Regression	analysis	helps	us	in	understanding	how	the	value	of	the	output	variable	changes when	we	vary	some	input	variables	while	keeping	other	input	variables	fixed.	
+> 	In	linear regression,	we	assume	that	the	relationship	between	input	and	output	is	linear.	This	puts	a constraint	on	our	modeling	procedure,	but	it's	fast	and	efficient. 
+> Sometimes,	linear	regression	is	not	sufficient	to	explain	the	relationship	between	input	and output.	Hence	we	use	polynomial	regression,	where	we	use	a	polynomial	to	explain	the relationship	between	input	and	output.	This	is	more	computationally	complex,	but	gives	higher accuracy.	Depending	on	the	problem	at	hand,	we	use	different	forms	of	regression	to	extract the	relationship.	Regression	is	frequently	used	for	prediction	of	prices,	economics,	variations, and	so	on.
+
+### Building a single variable regressor
+	
+	regression/single.py
