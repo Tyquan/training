@@ -60,8 +60,8 @@ print("Linear regressor performance:")
 print("Mean absolute error =", round(sm.mean_absolute_error(Y_test, y_test_pred), 2))
 print("Mean squared error =", round(sm.mean_squared_error(Y_test, y_test_pred), 2))
 print("Median absolute error =", round(sm.median_absolute_error(Y_test,	y_test_pred), 2))
-print("Explain variance score =", round(sm.explained_variance_score(Y_test,	y_test_pred), 2))
-print("R2 score =", round(sm.r2_score(Y_test, y_test_pred),	2), '\n')
+print("Explain variance score =", round(sm.explained_variance_score(Y_test, y_test_pred), 2))
+print("R2 score =", round(sm.r2_score(Y_test, y_test_pred), 2), '\n')
 
 """
 Once the model has been created, we can save it into a file so we

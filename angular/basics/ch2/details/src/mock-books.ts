@@ -1,0 +1,3 @@
+import { Book } from './book';
+
+export const BOOKS: Book[] = [  {    isbn: 9781786462084,    title: 'Laravel 5.x Cookbook',    authors: 'Alfred Nutile',    published: 'September 2016',    description: 'A recipe-based book to help you efficiently    create amazing PHP-based applications with Laravel 5.x',    coverImage: 'https://d255esdrn735hr.cloudfront.net/sites/    default/files/imagecache/ppv4_main_book_cover/    B05517_MockupCover_Cookbook_0.jpg'  },  {    isbn: 9781784396527,    title: 'Sitecore Cookbook for Developers',    authors: 'Yogesh Patel',    published: 'April 2016',
