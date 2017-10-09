@@ -14,10 +14,12 @@ export class BookStoreService {
 
     constructor(private loggerService: ConsoleLoggerService) {}
     getBooks(){
+        this.loggerService.log('Fetching all books...');
         return this.bookList;
     }
 
     getBook(isbn: number) {
+        this.loggerService.log('Fetching book information...');
         var selectedBook = this.bookList.filter(book => book.isbn === isbn);
     }
 

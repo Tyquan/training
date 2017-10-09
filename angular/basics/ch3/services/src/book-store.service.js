@@ -20,9 +20,11 @@ var BookStoreService = (function () {
         this.bookList = mock_books_1.BOOKS;
     }
     BookStoreService.prototype.getBooks = function () {
+        this.loggerService.log('Fetching all books...');
         return this.bookList;
     };
     BookStoreService.prototype.getBook = function (isbn) {
+        this.loggerService.log('Fetching book information...');
         var selectedBook = this.bookList.filter(function (book) { return book.isbn === isbn; });
     };
     BookStoreService.prototype.deleteBook = function (isbn) {
