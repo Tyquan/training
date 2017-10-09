@@ -1,0 +1,1 @@
+{"version":3,"file":"book-details.component.js","sourceRoot":"","sources":["book-details.component.ts"],"names":[],"mappings":";;;;;;;;;;;AAAA,sCAAgD;AAChD,gCAA+B;AAO/B,IAAa,oBAAoB;IAAjC;IAEA,CAAC;IAAD,2BAAC;AAAD,CAAC,AAFD,IAEC;AADY;IAAR,YAAK,EAAE;8BAAO,WAAI;kDAAC;AADX,oBAAoB;IALhC,gBAAS,CAAC;QACP,QAAQ,EAAE,cAAc;QACxB,WAAW,EAAE,8CAA8C;KAC9D,CAAC;GAEW,oBAAoB,CAEhC;AAFY,oDAAoB"}

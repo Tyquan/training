@@ -1,0 +1,23 @@
+<div *ngIf="book">
+    <div class="row selected-book">
+        <div class="col-xs-4">
+            <img [src]="book.coverImage" alt="cover image" class="img-responsive">
+        </div>
+        <div class="col-xs-8">
+            <h3 class="title">{{book.title}}</h3>
+            <p>{{book.authors}}</p>
+            <p>{{book.published}}</p>
+            <p>{{book.description}}</p>
+        </div>
+    </div>
+    <!-- end .row -->
+    <div class="row">
+        <div class="col-xs-10">
+            <button class="btn btn-danger float-xs-right mt-1">
+                Delete
+            </button>
+        </div>
+    </div>
+    <!-- end .row -->
+</div>
+<!-- end *ngIf -->
