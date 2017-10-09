@@ -1,20 +1,20 @@
 <h3 class="tite">Book List</h3>
-<div class="border-divider"></div>
+<hr>
 <div class="row">
-	<div class="col-xs-3">
-		<ul class="list">
-			<li class="list-item" *ngFor="let book of bookList">
-				<div class="cover-image-container">
-					<span class="cover-image">
-						<img [src]="book.coverImage" alt="cover image">
+    <div class="col-xs-3">
+        <ul class="list">
+            <li class="list-item" *ngFor="let book of bookList">
+                <div class="cover-image-container">
+                    <span class="cover-image">
+						<img [src]="book.coverImage" class="img-responsive" alt="cover image">
 					</span>
-				</div>
-				<div class="clear">
-					<h3 class="book-title">{{book.title}}</h3>
-					<h4 class="book-author">{{book.authors}}</h4>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-9">Right</div>
+                </div>
+                <div class="clear">
+                    <h3 class="book-title">{{book.title}}</h3>
+                    <h4 class="book-author">{{book.authors}}</h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-9">Right</div>
 </div>

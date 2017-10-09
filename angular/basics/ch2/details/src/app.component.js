@@ -25,7 +25,7 @@ var AppComponent = (function () {
                 "authors": "Yogesh Patel",
                 "published": "April 2016",
                 "description": "Over 70 incredibly effective and practical recipes to get you up and running with Sitecore development",
-                "coverImage": "https://d255esdrn735hr.cloudfront.net/sites/'default/files/imagecache/ppv4_main_book_cover/6527cov_.jpg"
+                "coverImage": 'https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/6527cov_.jpg'
             },
             {
                 "isbn": 9781783286935,
@@ -41,8 +41,8 @@ var AppComponent = (function () {
 }());
 AppComponent = __decorate([
     core_1.Component({
-        selector: 'book-list',
-        templateUrl: './app.component.html'
+        selector: 'books',
+        templateUrl: 'src/app.component.html'
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
