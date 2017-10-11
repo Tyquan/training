@@ -11,6 +11,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "filesize": "^3.5.10",
         "fs-jetpack": "^1.2.0",
         "mock-fs": "^4.4.1",
         "nw": "^0.25.4-sdk"

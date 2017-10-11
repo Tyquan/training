@@ -14,6 +14,7 @@ class TitleBarActionsview {
         this.unmaximizeEl.addEventListener("click", this.onUnmaximize.bind(this), false);
         this.maximizeEl.addEventListener("click", this.onMaximize.bind(this), false);
         this.minimizeEl.addEventListener("click", this.onMinimize.bind(this), false);
+        console.log("Title Bar Actions Activated");
     }
 
     // When a user clicks the close button
