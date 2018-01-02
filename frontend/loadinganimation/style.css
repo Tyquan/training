@@ -1,0 +1,72 @@
+body {
+	font-family: Palanquin;
+	background-color: #3498db;
+	color: white;
+}
+h1.loading {
+	font-size: 3em;
+	font-weight: 400;
+	margin-left: 3rem;
+	text-align: center;
+}
+
+span[class^='dot_'] {
+	opacity: 0;
+}
+
+.dot_one {
+	animation: dot_one 2s infinite linear;
+}
+
+@keyframes dot_one {
+	0% {
+		opacity: 0;
+	}
+	15% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.dot_two {
+	animation: dot_two 2s infinite linear;
+}
+
+@keyframes dot_two {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.dot_three {
+	animation: dot_three 2s infinite linear;
+}
+
+@keyframes dot_three {
+	0% {
+		opacity: 0;
+	}
+	65% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}

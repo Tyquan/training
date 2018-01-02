@@ -26,14 +26,3 @@ class Thing {
     }
         
 }
-
-// Tests
-
-var thing1 = new Thing();
-console.log(thing1);
-console.log(thing1.isAlive());
-
-thing1.alive = true;
-console.log('Made thing1 alive');
-console.log(thing1.isAlive());
-console.log(thing1);

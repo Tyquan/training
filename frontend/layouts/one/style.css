@@ -1,0 +1,95 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans";
+	background-color: white;
+}
+
+.wrapper {
+	max-width: 60rem;
+	width: 100%;
+	margin: 2rem auto;
+}
+
+.gradientbg {
+	background-color: linear-gradient(to right, #3498db 20%, white 20%, white 80%, #34495e 80%);
+}
+
+.gradientbg::before,
+.gradientbg::after {
+	content: " ";
+	display: table;
+}
+
+.gradientbg::after {
+	clear: both;
+}
+
+.gradientbg .sidebar {
+	width: 20%;
+	padding: 1.618rem;
+	color: white;
+}
+
+.gradientbg main {
+	width: 60%;
+  padding: 1.618rem;
+  float: left;
+  margin-left: 20%;
+}
+
+.gradientbg .left {
+  float: left;
+  margin-left: -80%;
+}
+.gradientbg .right {
+  float: right;
+}
+
+@media (max-width: 30rem) {
+  .gradientbg .sidebars {
+    background: none;
+  }
+  .gradientbg .sidebar {
+    width: 100%;
+  }
+  .gradientbg .left {
+    float: none;
+    background: #3498db;
+  }
+  .gradientbg .right {
+    float: none;
+    background: #34495e;
+  }
+}
+
+@media (max-width: 50rem) {
+  .gradientbg {
+    background: none;
+  }
+  .gradientbg main {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    background: #fff;
+  }
+  .gradientbg .sidebars {
+    background: linear-gradient(to right, #3498db 50%, #34495e 50%);
+  }
+  .gradientbg .sidebars::before,
+  .gradientbg .sidebars::after {
+    content: " ";
+    display: table;
+  }
+  .gradientbg .sidebars::after {
+    clear: both;
+  }
+  .gradientbg .sidebar {
+    width: 50%;
+  }
+  .gradientbg .left {
+    margin-left: 0;
+  }
+}

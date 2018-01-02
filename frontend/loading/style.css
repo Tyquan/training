@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Palanquin;
+	line-height: 1.618em;
+	background-color: #3498db;
+	color: white;
+}
+
+.wrapper {
+	max-width: 50rem;
+	width: 100%;
+	margin: 5rem auto;
+	text-align: center;
+}
+
+h1.loading {
+	font-size: 3em;
+	font-weight: 400;
+}
